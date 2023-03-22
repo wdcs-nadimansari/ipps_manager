@@ -14,8 +14,8 @@ public class Content {
 
 //    public static final String BASE_URL = "https://webcluesstaging.com/qa/ipps/api/";
 //    public static final String BASE_URL = "https://webcluesstaging.com/ipps/api/";
-    public static final String BASE_URL = "http://cmms.ippsystem.com/api/";
-    public static final String SERVER_KEY = "AAAA3kP7ZR0:APA91bFbso38X2oKcoxB9ND7oUuIXkcXuwiaWeJLcmj3kbe307KbPGV_MaFD16rTf_3c7SwMQD2E8R3IBkMb_zprqf-95w1EP32PzCzPWUjO5CY8ppt3jdJErIBJGVM9YyfCZfaevU5K";
+    public static final String BASE_URL = "";
+    public static final String SERVER_KEY = "";
 
     //api codes
     public static final String STATUS_CODE = "status_code";
