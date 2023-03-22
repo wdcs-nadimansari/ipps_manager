@@ -1,0 +1,359 @@
+<resources>
+    <string name="app_name">Admin</string>
+    <string name="places_api_key">AIzaSyAeArSrrcp9foAp6FtWxzdMx2EAUP3hPsM</string>
+    <string name="facebook_app_id">800309066991690</string>
+    <string name="fb_login_protocol_scheme">fb800309066991690</string>
+    <string name="default_notification_channel_id">All notification</string>
+    <string name="update_message">It seems you are on outdated version of this app, please consider updating your application.</string>
+    <string name="iot">IOT 4.0</string>
+
+    <!--Font Styles-->
+    <string name="font_regular">lato_regular.ttf</string>
+    <!--    <string name="font_regular">lato_regular.ttf</string>-->
+    <string name="font_medium">lato_medium.ttf</string>
+    <string name="font_semibold">lato_semibold.ttf</string>
+    <string name="font_bold">lato_bold.ttf</string>
+    <string name="font_heavy">lato_black.ttf</string>
+    <string name="font_light">lato_light.ttf</string>
+    <!--    <string name="font_thin">lato_thin.ttf</string>-->
+    <string name="font_thin">lato_thin.ttf</string>
+    <!--    <string name="font_thin">lato_thin.ttf</string>-->
+
+
+    <!--Menu Items-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="maintenance_app">Maintenance App</string>
+    <string name="engineers">Staff</string>
+    <string name="about_us">About Us</string>
+    <string name="change_password">Change Password</string>
+    <string name="support">Support</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="faq">FAQ</string>
+    <string name="logout">Logout</string>
+
+    <!--TAB Items-->
+    <string name="all">ALL</string>
+    <string name="job_order">Job Order</string>
+    <string name="job_request">Job Request</string>
+    <string name="assigned">Assigned</string>
+    <string name="engineer_task_order">Engineer task Order</string>
+    <string name="report">Report</string>
+    <string name="notifications">Notification</string>
+    <string name="workorder">Work Order</string>
+    <string name="decline">Declined</string>
+    <string name="declined">Decline</string>
+    <string name="ongoing">On Going</string>
+    <string name="completed">Completed</string>
+    <string name="kiv">Kiv</string>
+    <string name="incomplete">Incomplete</string>
+    <string name="chats">Chats</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <!--    <string name="chat">Chat</string>-->
+    <string name="chat">Chat</string>
+
+
+    <!--Error Messages-->
+
+    <string name="lbl_grant_required_permissions_line">"You need to give some mandatory permissions to continue. Do you want to go to app settings?"</string>
+
+    <string name="error_msg_network">Something went wrong. Please try after sometime</string>
+    <string name="error_msg_network_title">Network Failure</string>
+    <string name="error_msg_mobile_or_email_blank">Please enter mobile number or email</string>
+
+    <string name="str_empty_firstName">Please enter first name</string>
+    <string name="str_invalid_firstName">First name should be min. 2 and max. 50 characters</string>
+    <string name="str_empty_lastName">Please enter last name</string>
+    <string name="str_invalid_lastName">Last name should be min. 2 and Max. 50 characters</string>
+    <string name="str_val_email_empty">Please enter email address</string>
+    <string name="str_val_emal">Please enter valid email address</string>
+    <string name="str_val_phone_empty">Please enter phone number</string>
+    <string name="str_val_phone_valid">Phone number should be min. 8 and max. 10 numbers</string>
+    <string name="str_val_position">Please select position</string>
+    <string name="str_val_company">Please select company</string>
+    <string name="str_val_pass_empty">Please enter password</string>
+    <string name="str_val_new_pass_empty">Please enter new password</string>
+    <string name="str_current_pass_empty">Please enter old password</string>
+    <string name="str_val_pass_length">Password should have min. 6 and max. 15 characters</string>
+    <string name="str_val_newpass_length">New password should have min. 6 and max. 15 characters</string>
+    <string name="str_val_conf_pass_length">Confirm password should have min. 6 and max. 15 characters</string>
+    <string name="str_invalid_current_password">Please enter your valid password</string>
+    <string name="str_val_confirm_pass_empty">Please enter confirm password</string>
+    <string name="str_val_pass_conf_match">New password and confirm password do not match, please enter correct password</string>
+    <string name="error_msg_image_blank">Please add atleast one photo</string>
+    <string name="error_msg_job_title_blank">Please enter job title</string>
+    <string name="error_msg_description_blank">Please enter description</string>
+    <string name="error_msg_location_blank">Please select location</string>
+    <string name="error_msg_machine_blank">Please select machine</string>
+    <string name="error_msg_problem_blank">Please select problem</string>
+    <string name="error_msg_comment_blank">Please enter comment</string>
+    <string name="error_msg_reason_blank">Please add comment</string>
+    <string name="error_subject_blank">Please enter subject</string>
+    <string name="error_message_blank">Please enter message</string>
+    <string name="error_msg_max_image">You have reached maximum image limit</string>
+    <string name="error_radiooption_blank">Please select option</string>
+    <string name="error_assignfitter_blank">Please select fitter / maintenance personnel</string>
+    <string name="error_priority_blank">Please select priority</string>
+
+    General Strings-->
+    <string name="or">or</string>
+    <string name="welcome">Welcome</string>
+    <string name="sign_in">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="mobile_number_or_email_id">Mobile Number/ Email</string>
+    <string name="forgot">Forgot?</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_desc">It is a long established fact that a reader will be distracted.</string>
+    <string name="sign_up">Register</string>
+    <string name="do_not_have_an_account">Don\'t have an account?</string>
+    <string name="login_account">Please login to your account.</string>
+    <string name="back_to">Back to </string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="priority">PRIORITY :</string>
+    <string name="PRIORITY">PRIORITY</string>
+    <string name="clear_history_text">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
+    <string name="please_wait">please wait...</string>
+    <string name="error_something_is_wrong_ln">Something went wrong on server</string>
+    <string name="skip">Skip> ></string>
+    <string name="address">Address</string>
+    <string name="save_as">Save Address As</string>
+    <string name="next">Next</string>
+    <string name="or_sign_in_with">Or Log in with</string>
+    <string name="profile">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="email">Email Address</string>
+    <string name="add_more">Add more</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="save">Save</string>
+    <string name="save_update">Save Update</string>
+    <string name="new_password">New Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="subject">Subject</string>
+    <string name="enter_message">Enter your message</string>
+    <string name="message">Message</string>
+    <string name="send">SEND</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="no_record">No Record Found</string>
+    <string name="password_changed">Your password has been changed successfully.</string>
+    <string name="reset">Reset</string>
+    <string name="view_profile">View Profile</string>
+    <string name="emergency_contact_name_1">Emergency Contact Name 1</string>
+    <string name="emergency_contact_name_2">Emergency Contact Name 2</string>
+    <string name="emergency_contact_number_1">Emergency Contact Number 1</string>
+    <string name="emergency_contact_number_2">Emergency Contact Number 2</string>
+    <string name="year_of_experience">Years Of Experience</string>
+    <string name="language_you_know">Languages You Know</string>
+    <string name="accept">Accept</string>
+    <string name="assign_engineer">Assign Maintenance Personnel</string>
+    <string name="assign_maintenance">Fitter / Maintenance Personnel</string>
+    <string name="set_priority">Set Priority</string>
+    <string name="update">Update</string>
+    <string name="book">Book</string>
+    <string name="retry">Retry</string>
+    <string name="you_have">You have</string>
+    <string name="messages">messages</string>
+    <string name="add_reason">Add Reason</string>
+    <string name="add_comment">Add Comment</string>
+    <string name="default_comment">Not suitable</string>
+    <string name="cretaed_job">Created job:</string>
+    <string name="job_start_time">Job Start Time:</string>
+    <string name="location">Location:</string>
+    <string name="problem">Problem:</string>
+    <string name="incomlete_reason">Incomplete Reason :</string>
+    <string name="decline_by">Declined By</string>
+    <string name="decline_reason">Declined Reason:</string>
+
+    <string name="comment_desc">Comment / Description</string>
+    <string name="summary">Summary</string>
+    <string name="details">Details</string>
+    <string name="sensor">Sensor</string>
+    <string name="sorter">sorter</string>
+    <string name="add_sensor">Add Sensor</string>
+    <string name="sensor_history">Sensor History</string>
+    <string name="history">History</string>
+    <string name="sensor_and_sorter">sensor And Sorter</string>
+    <string name="sensor_and_sorter_readings">Sensor And Sorter Readings</string>
+    <string name="lbl_suspend_account">Account Suspended</string>
+    <string name="error_internet_ln">Please check your internet connection.</string>
+    <string name="error_add_high_limit">Please enter high limit</string>
+    <string name="error_add_low_limit">Please enter low limit</string>
+    <string name="error_add_x_high_limits">Please enter X high limit</string>
+    <string name="error_add_x_low_limits">Please enter X low limit</string>
+    <string name="error_add_y_high_limits">Please enter Y high limit</string>
+    <string name="error_add_y_low_limits">Please enter Y low limit</string>
+    <string name="error_add_z_high_limits">Please enter Z high limit</string>
+    <string name="error_add_z_low_limits">Please enter Z low limit</string>
+    <string name="error_invalid_limits">Please enter high limit greater than low limit</string>
+    <string name="error_invalid_xlimits">Please enter high limit greater than low limit in X Axes</string>
+    <string name="error_invalid_ylimits">Please enter high limit greater than low limit in Y Axes</string>
+    <string name="error_invalid_zlimits">Please enter high limit greater than low limit in Z Axes</string>
+    <string name="str_report_not_found">No sensor found related to your company</string>
+    <!--    Report Screen-->
+    <string name="temprature">Temperature</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="beacon_name">Beacon Name:</string>
+    <string name="battery">Battery:</string>
+    <string name="running_hour">Running Hour:</string>
+    <string name="alarm_setting">Alarm Setting</string>
+    <string name="set_alarm">Set Alarm</string>
+    <string name="limit_high">Limit High</string>
+    <string name="limit_low">Limit Low</string>
+    <string name="x_axis">X - Axis</string>
+    <string name="y_axis">Y - Axis</string>
+    <string name="z_axis">Z - Axis</string>
+    <!--Filter Questions-->
+    <string name="is_comfortable_with_pets">Is comfortable with pets</string>
+    <string name="has_a_college_degree">Has a college degree</string>
+    <string name="cpr_first_aid_trained">CPR/First Aid Certified</string>
+    <string name="willing_to_drive_children">Willing to drive children</string>
+    <string name="has_own_transportation">Has own transportation</string>
+    <string name="does_not_smoke">Does not smoke</string>
+    <string name="query_successfully_sent">Query Successfully Sent</string>
+    <string name="lbl_request_success">It is a pending established fact that a \nreader will be distracted.</string>
+    <string name="hint_write_message">Write your message here .…</string>
+    <string name="mechanical_engineer">Mechanical Engineer</string>
+    <string name="civil_engineer">Civil Engineer</string>
+
+    <string name="electrical_engineer">Electrical Engineer</string>
+
+    <!--Util Stings-->
+    <string name="allowed_password">1234567890qwertyuioplkjhgfdsazxcvbnm</string>
+    <!--    <string name="partName">qwertzuiopasdfghjklyxcvbnmABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>-->
+    <string name="locaton_name">Location name: </string>
+    <string name="problem_name">Problem name: </string>
+    <string name="comment">Comment:</string>
+    <string name="engineer_comment">Engineer\'s Comment:</string>
+    <string name="engineer_name">Staff Name</string>
+    <string name="comment_description">Comment / Description:</string>
+    <string name="partName">qwertzuiopasdfghjklyxcvbnmABCDEFGHIJKLMNOPQRSTUVWXYZ "</string>
+
+
+    //Accaptable
+
+
+    <string name="str_new_register">New Register</string>
+    <string name="str_register_info">Please register to your account.</string>
+    <string name="str_first_name">First Name</string>
+    <string name="phone">Phone</string>
+    <string name="position">Position</string>
+    <string name="company">Company</string>
+    <string name="already_have_acc">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="str_register">Register</string>
+    <string name="change">Change</string>
+    <string name="change_pass_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec sem sit amet erat facilisis maximus.</string>
+    <string name="add_new_job">Add New Job</string>
+    <string name="end_job">End Job</string>
+    <string name="add_job_message">Facilisis id tincidunt sed, vulputate in lacus.</string>
+    <string name="job_title">Job Title</string>
+    <string name="add_photos">Photos</string>
+    <string name="select_machine">Machine</string>
+    <string name="select_location">Location</string>
+    <string name="select_problem">Problem</string>
+    <string name="add_description">Add Comment / Description</string>
+    <string name="job_detail">Job Details</string>
+    <string name="move_joborder">MOVE TO JOB ORDER</string>
+
+
+    <!--Notifications Time-->
+
+
+    <string name="seconds_ago">Few Second(s) ago</string>
+    <string name="a_minute_ago">A minute ago</string>
+    <string name="minutes_ago">Minute(s) ago</string>
+    <string name="an_hour_ago">An hour ago</string>
+    <string name="hours_ago">Hour(s) ago</string>
+    <string name="a_day_ago">A day ago</string>
+    <string name="days_ago">Day(s) ago</string>
+    <string name="a_week_ago">A week ago</string>
+    <string name="weeks_ago">Week(s) ago</string>
+    <string name="a_month_ago">A month ago</string>
+    <string name="months_ago">Month(s) ago</string>
+    <string name="a_year_ago">A year ago</string>
+    <string name="years_ago">Year(s) ago</string>
+    <string name="lbl_today">Today</string>
+    <string name="lbl_earlier">Earlier</string>
+    <string name="lbl_yesterday">Yesterday</string>
+    //FAQ Item
+
+    <string name="faq_title1">How venenatis consequat porttitor?</string>
+    <string name="faq_title2">How venenatis consequat porttitor?</string>
+    <string name="faq_title3">How Fusce convalis in tincidunt ullamcorper?</string>
+    <string name="faq_title4">Sed nec velit sit amet dolor pulvinar feugiat?</string>
+    <string name="faq_title5">How venenatis consequat porttitor?</string>
+    <string name="faq_title6">How Fusce convalis in tincidunt ullamcorper?</string>
+    <string name="faq_title7">How Fusce convalis in tincidunt ullamcorper?</string>
+    <string name="faq_title8">How venenatis consequat porttitor?</string>
+    <string name="faq_desc">Aliquam faucibus,odio nec commondo aliquam, neque felis placerat dui, a porta ante lectus dapibus est. Aliquam a bibendum mi, sed condimentum est.</string>
+
+
+    //metal item
+    <string name="machinename">Conveyor 1</string>
+    <string name="locationname">Oil Room</string>
+    <string name="problemname">Shaft Broken</string>
+    <string name="metalname">Brass and Stainless Steel Metal</string>
+    <string name="metalname1">Ornare quisque Metal Tool</string>
+    <string name="metalname2">Convallis ultricies</string>
+    <string name="metalname3">Convallis ultricies</string>
+    <string name="metaldesc">Aenem ornare lectus tristique.</string>
+    <string name="metal_desc">Nunc ut volutpat lectus.</string>
+    <string name="metal_priority">Medium</string>
+    <string name="metaldate">12 Nov 2019</string>
+    <string name="metalstatus">completed</string>
+
+    //metal desc
+
+    <string name="job_duration">Job Duration</string>
+    <string name="desc">Sed a magna semper,porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien..</string>
+    <string name="operator_name">Created job:  Operator Name  |  12 Sep 2019  |  9:30 PM</string>
+    <string name="machine_name">Brass and Stainless Machine</string>
+    <string name="location_problem">Brass and Stainless Machine</string>
+
+    //prioriy item//
+
+
+    <string name="pending">PENDING</string>
+    <string name="low">PREVENTIVE</string>
+    <string name="medium">NORMAL</string>
+    <string name="high">URGENT</string>
+
+    <string-array name="priority_item">
+
+        <item>ALL</item>
+        <item>PENDING</item>
+        <item>PREVENTIVE</item>
+        <item>NORMAL</item>
+        <item>URGENT</item>
+
+    </string-array>
+
+    <string name="current">Current</string>
+    <string name="voltage">Voltage</string>
+    <string name="power">Power</string>
+    <string name="axis">Axis</string>
+    <string-array name="energy_meter_filter">
+
+        <item>Current</item>
+        <item>Voltage</item>
+        <item>Power</item>
+    </string-array>
+
+    <string-array name="beacon_filter">
+        <item>Temperature</item>
+        <item>Axis</item>
+    </string-array>
+</resources>

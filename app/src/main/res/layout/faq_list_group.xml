@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rrGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtGroupItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_toStartOf="@id/ivIndicator"
+            android:fontFamily="@font/lato_medium"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:textColor="@color/fontColorBlack"
+            android:textSize="@dimen/text_big" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIndicator"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:src="@drawable/ic_dropdown" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/Groupview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0.5sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@color/fontColorBlack60" />
+
+</LinearLayout>

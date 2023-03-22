@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical"
+    android:padding="@dimen/main_layout_padding"
+    tools:context=".fragments.ReportFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/sensor"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAddSensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="end"
+            android:text="@string/add_sensor"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_big"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSensorHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:nestedScrollingEnabled="false"
+            android:visibility="visible"
+            tools:listitem="@layout/adp_sensor_history" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtNoRecord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/lato_semibold"
+            android:gravity="center"
+            android:text="@string/str_report_not_found"
+            android:textColor="@color/fontColorBlack"
+            android:textSize="@dimen/_14sdp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0.5sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@color/colorlightgray"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSorterHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:padding="@dimen/main_layout_padding"
+        android:visibility="gone"
+        tools:listitem="@layout/adp_sorter_history" />
+
+
+</LinearLayout>

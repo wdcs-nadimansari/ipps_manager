@@ -1,0 +1,135 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="Theme.AppCompat.Transparent.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/lato_medium</item>
+
+    </style>
+
+    <style name="BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/TextAppearance.BottomNavigationView.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.BottomNavigationView.Inactive</item>
+    </style>
+
+    <!-- blank styles for better code readability-->
+    <style name="TextAppearance"/>
+    <style name="TextAppearance.BottomNavigationView"/>
+
+    <!-- inactive tab icon style -->
+    <style name="TextAppearance.BottomNavigationView.Inactive">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/lato_medium</item>
+    </style>
+
+    <!-- active tab icon style -->
+    <style name="TextAppearance.BottomNavigationView.Active">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="android:fontFamily">@font/lato_semibold</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
+
+    <style name="FontTextApperence" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/lato_semibold</item>
+    </style>
+
+    <style name="bottom_navigation_font">
+        <item name="fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="CircularProgress" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+
+    <!--   <style name="AppTheme.PopupOverlay" parent="AppTheme.PopupOverlay">
+           &lt;!&ndash; Customize your theme here. &ndash;&gt;
+           <item name="colorPrimary">@color/colorPrimary</item>
+           <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+           <item name="colorAccent">@color/colorAccent</item>
+       </style>-->
+
+    <!--  <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>-->
+    <style name="AppThemeCrop" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CustomViewAllTab" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
+
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+<!--        <item name="colorPrimaryDark">@color/colorPrimary</item>-->
+        <item name="colorAccent">@color/colorPrimary</item>
+<!--        <item name="android:textColor">@color/colorAccent</item>-->
+<!--        <item name="android:fontFamily">@fonts/font_regular</item>-->
+    </style>
+
+    <style name="CalendarWidgetDate">
+        <item name="android:fontFamily">@fonts/font_regular</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+
+    <style name="CalendarWeekDay">
+        <item name="android:fontFamily">@fonts/font_regular</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/lightGrey_45op</item>
+    </style>
+
+    <style name="TimePickerTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
+    </style>
+
+    <style name="textFontFamilyRegular" parent="android:Widget">
+        <item name="android:fontFamily">@font/lato_regular</item>
+    </style>
+
+    <style name="InputLayoutStyle" parent="@android:style/TextAppearance">
+
+        <item name="android:textColor">@color/fontColorBlack50</item>
+        <item name="android:colorError" tools:targetApi="o">@color/red</item>
+
+    </style>
+</resources>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RadioGroup
+        android:id="@+id/RadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:orientation="horizontal"
+        android:padding="@dimen/_3sdp">
+
+
+        <RadioButton
+            android:id="@+id/rbKiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            android:fontFamily="@font/lato_medium"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/kiv"
+            android:textAllCaps="true" />
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:orientation="horizontal">-->
+
+            <RadioButton
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/rbAssignEnginner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:fontFamily="@font/lato_medium"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="@string/assign_engineer"
+                android:textAllCaps="false" />
+
+
+<!--
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/lato_medium"
+                android:lines="2"
+                android:text="@string/assign_engineer"
+                android:textAllCaps="false" />
+-->
+
+
+        <!--</LinearLayout>-->
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/llView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RadioGroup"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp">
+
+
+            <com.webclues.IPPSManager.view.MaterialAutoCompleteTextView
+                android:id="@+id/edtEngineerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:focusableInTouchMode="false"
+                android:hint="@string/assign_maintenance"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:singleLine="true"
+                android:textColor="@color/fontColorBlack"
+                android:textSize="@dimen/text_small"
+                app:met_errorColor="@color/red"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="@color/fontColorBlack50"
+                app:met_textColorHint="@color/fontColorBlack50"
+                app:met_typeface="@string/font_medium" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/ic_dropdown_form"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/set_priority"
+            android:textColor="@color/lightGrey"
+            android:textSize="@dimen/text_medium" />
+
+        <LinearLayout
+            android:id="@+id/llPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtLow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/extraLightGrey"
+                android:fontFamily="@font/lato_medium"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/low"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/text_medium" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/extraLightGrey"
+                android:fontFamily="@font/lato_medium"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/medium"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/text_medium" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtHigh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/extraLightGrey"
+                android:fontFamily="@font/lato_medium"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/high"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/text_medium" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/lato_bold"
+        android:padding="@dimen/_20sdp"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_medium" />
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/ivEngineerProfile"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:src="@drawable/ic_placeholder_profile" />
+
+    <LinearLayout
+        android:id="@+id/llEngineer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_toEndOf="@id/ivEngineerProfile"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtEngineerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text=""
+            android:textColor="@color/fontColorBlack"
+            android:textSize="@dimen/text_medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtEnginnerPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_medium"
+            android:padding="@dimen/_3sdp"
+            android:text=""
+            android:textColor="@color/colorlightgray"
+            android:textSize="@dimen/text_small" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0.5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/grey_60" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtEngineerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_medium"
+        android:padding="@dimen/_10sdp"
+        android:text="Engineer Name"
+        android:textColor="@color/colorlightgray"
+        android:textSize="@dimen/text_medium" />
+
+    <View
+        android:id="@+id/View"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/txtEngineerName"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/colorlightgray" />
+
+
+</RelativeLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeaderKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="Today"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone"
+            app:typefaceAsset="@string/font_regular" />
+
+        <LinearLayout
+            android:id="@+id/lnSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:gravity="right"
+            android:maxWidth="@dimen/_200sdp"
+            android:maxHeight="@dimen/_200sdp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/round_corner_sender_bg"
+                android:maxWidth="@dimen/_200sdp"
+                android:minWidth="@dimen/_50sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtSenderName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_bold"
+                        android:singleLine="true"
+                        android:text="@string/maintenance_app"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_medium" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtSenderTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:fontFamily="@font/lato_regular"
+                        android:maxLines="1"
+                        android:text="06:15 PM"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtSenderMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_regular"
+                    android:inputType="textMultiLine"
+                    android:maxWidth="@dimen/_200sdp"
+                    android:minWidth="@dimen/_50sdp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="gone" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSenderImagePath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:maxWidth="@dimen/_200sdp"
+                    android:minWidth="@dimen/_50sdp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/ivSenderImage"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_placeholder_profile"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lnReceiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:gravity="left"
+            android:maxWidth="@dimen/_200sdp"
+            android:maxHeight="@dimen/_200sdp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivReceiverImage"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_placeholder_profile"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@drawable/round_corner_reciever_bg"
+                android:maxWidth="@dimen/_200sdp"
+                android:minWidth="@dimen/_50sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtRecieverName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_bold"
+                        android:singleLine="true"
+                        android:text="@string/maintenance_app"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/text_medium" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtReceiverTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:fontFamily="@font/lato_regular"
+                        android:maxLines="1"
+                        android:text="06:15 PM"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/text_small" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtReceiverMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_regular"
+                    android:inputType="textMultiLine"
+                    android:maxWidth="@dimen/_200sdp"
+                    android:minWidth="@dimen/_50sdp"
+                    android:text="@string/maintenance_app"
+                    android:textColor="@color/fontColorBlack"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="gone" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivReceiverImagepath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:maxWidth="@dimen/_200sdp"
+                    android:minWidth="@dimen/_50sdp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

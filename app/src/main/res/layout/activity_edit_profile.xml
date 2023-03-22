@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.EditProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ivBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/back_arrow"
+            android:drawablePadding="@dimen/_15sdp"
+            android:fontFamily="@font/lato_semibold"
+            android:padding="@dimen/_15sdp"
+            android:text="@string/edit_profile"
+            android:textAllCaps="true"
+            android:textColor="@color/fontColorBlack"
+            android:textSize="@dimen/text_big" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/main_layout_padding"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+                    android:id="@+id/frmProfile"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/change_profile" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivEditImage"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/change_profile_icon" />
+                </FrameLayout>
+
+                <com.webclues.IPPSManager.view.MaterialEditText
+                    android:id="@+id/edtFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="@string/partName"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:hint="@string/first_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textColor="@color/fontColorBlack"
+                    android:textSize="@dimen/text_medium"
+                    app:met_errorColor="@color/red"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/fontColorBlack50"
+                    app:met_textColorHint="@color/fontColorBlack50"
+                    app:met_typeface="@string/font_medium" />
+
+
+                <com.webclues.IPPSManager.view.MaterialEditText
+                    android:id="@+id/edtLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:digits="@string/partName"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:hint="@string/last_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textColor="@color/fontColorBlack"
+                    android:textSize="@dimen/text_medium"
+                    app:met_errorColor="@color/red"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/fontColorBlack50"
+                    app:met_textColorHint="@color/fontColorBlack50"
+                    app:met_typeface="@string/font_medium" />
+
+                <com.webclues.IPPSManager.view.MaterialEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:hint="@string/email_address"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/fontColorBlack"
+                    android:textSize="@dimen/text_medium"
+                    app:met_errorColor="@color/red"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/fontColorBlack50"
+                    app:met_textColorHint="@color/fontColorBlack50"
+                    app:met_typeface="@string/font_medium" />
+
+                <com.webclues.IPPSManager.view.MaterialEditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="start"
+                    android:hint="@string/phone"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textColor="@color/fontColorBlack"
+                    android:textSize="@dimen/text_medium"
+                    app:met_errorColor="@color/red"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/fontColorBlack50"
+                    app:met_textColorHint="@color/fontColorBlack50"
+                    app:met_typeface="@string/font_medium" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.webclues.IPPSManager.view.MaterialAutoCompleteTextView
+                        android:id="@+id/edtPosition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/position"
+                        android:inputType="none"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/text_medium"
+                        app:met_errorColor="@color/red"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextColor="@color/fontColorBlack50"
+                        app:met_textColorHint="@color/fontColorBlack50"
+                        app:met_typeface="@string/font_medium" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/ic_dropdown_form"
+                        android:visibility="visible" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.webclues.IPPSManager.view.MaterialAutoCompleteTextView
+                        android:id="@+id/edtCompany"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:focusableInTouchMode="false"
+                        android:gravity="start"
+                        android:hint="@string/company"
+                        android:inputType="none"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/text_medium"
+                        app:met_errorColor="@color/red"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextColor="@color/fontColorBlack50"
+                        app:met_textColorHint="@color/fontColorBlack50"
+                        app:met_typeface="@string/font_medium" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/ic_dropdown_form" />
+
+                </FrameLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:padding="@dimen/_15sdp"
+                    android:text="@string/edit_profile"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <!--  </LinearLayout>-->
+</LinearLayout>
+

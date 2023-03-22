@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/txtDetails">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMachineName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/app_name"
+            android:textColor="@color/fontColorBlack"
+            android:textSize="@dimen/text_small" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtmachineOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMachineName"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@string/medium"
+            android:text="@string/app_name"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_small" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:text="@string/details"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_small" />
+
+</RelativeLayout>

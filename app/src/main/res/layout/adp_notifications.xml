@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:padding="@dimen/_5sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_notification_rounded"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_toEndOf="@id/ivNotification"
+        android:fontFamily="@font/lato_medium"
+        android:text=""
+        android:textColor="@color/fontColorBlack40"
+        android:textSize="@dimen/text_small" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivNotification"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/lato_medium"
+        android:text=""
+        android:textColor="@color/fontColorBlack"
+        android:textSize="@dimen/text_medium" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0.5sdp"
+        android:layout_below="@id/txtDescription"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/fontcolorgrey" />
+</RelativeLayout>

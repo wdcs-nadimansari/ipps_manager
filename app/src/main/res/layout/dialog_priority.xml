@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/extraLightGrey"
+        android:orientation="vertical">-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtLow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_medium"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/low"
+        android:textColor="@color/colorlightgray"
+        android:textSize="@dimen/text_small" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0.5sdp"
+        android:background="@color/colorlightgray" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/lato_medium"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/medium"
+        android:textColor="@color/colorlightgray"
+        android:textSize="@dimen/text_small" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0.5sdp"
+        android:background="@color/colorlightgray" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHigh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_medium"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/high"
+        android:textColor="@color/colorlightgray"
+        android:textSize="@dimen/text_small" />
+
+</LinearLayout>
+
+    <!--
+
+    </LinearLayout>-->

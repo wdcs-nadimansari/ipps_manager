@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.JobDetailActivity">
+
+    <!-- <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/_10sdp">
+ -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:id="@+id/llName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ivBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/back_arrow"
+                android:drawablePadding="@dimen/_15sdp"
+                android:fontFamily="@font/lato_semibold"
+                android:padding="@dimen/_15sdp"
+                android:text="@string/job_detail"
+                android:textAllCaps="true"
+                android:textColor="@color/fontColorBlack"
+                android:textSize="@dimen/text_big"
+                app:drawableTint="@color/black" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rrJobDuration"
+            android:layout_below="@id/llName">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/llViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_230sdp">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/ivViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true" />
+
+                    <LinearLayout
+                        android:id="@+id/Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:gravity="bottom"
+                        android:orientation="horizontal"
+                        android:padding="10dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/llStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llViewPager"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:fontFamily="@font/lato_medium"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/text_small" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPriority"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_toStartOf="@id/txtAssignPriority"
+                        android:fontFamily="@font/lato_medium"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_3sdp"
+                        android:text="@string/PRIORITY"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorlightgray"
+                        android:textSize="@dimen/text_small" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtStatusPriority"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/lato_medium"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_small" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtAssignPriority"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/round_lightblue_bg"
+                        android:drawableEnd="@drawable/ic_priority"
+                        android:fontFamily="@font/lato_medium"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_small"
+                        android:visibility="invisible" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llComments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtStatus"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="@string/comment"
+                            android:textColor="@color/fontColorBlack"
+                            android:textSize="@dimen/text_medium" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtDeclineComment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_medium"
+                            android:text=""
+                            android:textColor="@color/colorlightgray"
+                            android:textSize="@dimen/text_small" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llEngineerComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtStatus"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="@string/engineer_comment"
+                            android:textColor="@color/fontColorBlack"
+                            android:textSize="@dimen/text_medium" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtEngineerComment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_medium"
+                            android:text=""
+                            android:textColor="@color/colorlightgray"
+                            android:textSize="@dimen/text_small" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llEngineerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtStatus"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_medium"
+                            android:text="@string/engineer_name"
+                            android:textColor="@color/colorlightgray"
+                            android:textSize="@dimen/text_small" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtEngineerName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/lato_bold"
+                                android:text=""
+                                android:textColor="@color/fontColorBlack"
+                                android:textSize="@dimen/text_medium" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/btnChangeEngneerName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_toEndOf="@id/txtEngineerName"
+                                android:background="@drawable/round_lightblue_bg"
+                                android:fontFamily="@font/lato_medium"
+                                android:gravity="center"
+                                android:text="@string/change"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/text_small"
+                                android:visibility="gone" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llJobDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtStatus"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_medium"
+                            android:text="@string/job_duration"
+                            android:textColor="@color/colorlightgray"
+                            android:textSize="@dimen/text_small" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtJobDuration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily=""
+                            android:text=""
+                            android:textColor="@color/fontColorBlack"
+                            android:textSize="@dimen/text_medium" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llMetalDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/llStatus"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtMachinename"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text=""
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/_20sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtMetalDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:fontFamily="@font/lato_medium"
+                        android:maxLines="2"
+                        android:text="@string/desc"
+                        android:textColor="@color/colorlightgray"
+                        android:textSize="@dimen/text_small"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_medium"
+                            android:text="@string/cretaed_job"
+                            android:textColor="@color/grey_60"
+                            android:textSize="@dimen/text_small" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtOperatorName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_medium"
+                            android:text=""
+                            android:textColor="@color/grey_60"
+                            android:textSize="@dimen/text_small" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llJobStartTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_medium"
+                            android:text="@string/job_start_time"
+                            android:textColor="@color/grey_60"
+                            android:textSize="@dimen/text_small" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtJobStartTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_medium"
+                            android:text=""
+                            android:textColor="@color/grey_60"
+                            android:textSize="@dimen/text_small" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:background="@color/grey_60" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:fontFamily="@font/lato_medium"
+                        android:text="@string/location"
+                        android:textColor="@color/grey_60"
+                        android:textSize="@dimen/text_small" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text=""
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/text_medium" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:fontFamily="@font/lato_medium"
+                        android:text="@string/problem"
+                        android:textColor="@color/grey_60"
+                        android:textSize="@dimen/text_small" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtProblem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text=""
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/text_medium" />
+
+                    <LinearLayout
+                        android:id="@+id/llDescriptions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/lato_medium"
+                            android:text="@string/comment_description"
+                            android:textColor="@color/grey_60"
+                            android:textSize="@dimen/text_small" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtCommentDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text=""
+                            android:textColor="@color/fontColorBlack"
+                            android:textSize="@dimen/text_medium" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:background="@color/grey_60"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/llIncompleteReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_medium"
+                            android:text="@string/incomlete_reason"
+                            android:textColor="@color/grey_60"
+                            android:textSize="@dimen/text_small" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtIncompleteReason"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text=""
+                            android:textColor="@color/fontColorBlack"
+                            android:textSize="@dimen/text_medium" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llDeclineBy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtDeclineBy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_medium"
+                            android:text="@string/decline_by"
+                            android:textColor="@color/grey_60"
+                            android:textSize="@dimen/text_small" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtDeclineByUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text=""
+                            android:textColor="@color/fontColorBlack"
+                            android:textSize="@dimen/text_medium" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/lato_medium"
+                            android:text="@string/decline_reason"
+                            android:textColor="@color/grey_60"
+                            android:textSize="@dimen/text_small" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtDeclineReason"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text=""
+                            android:textColor="@color/fontColorBlack"
+                            android:textSize="@dimen/text_medium" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llMetalDesc"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAccept"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="@dimen/_20sdp"
+
+                        android:layout_weight="1"
+                        android:background="@color/green"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="@string/accept"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_medium" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnDecline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:background="@color/red"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center"
+                        android:text="@string/declined"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_medium" />
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnUpdte"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llRequest"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:padding="@dimen/_15sdp"
+                    android:text="@string/update"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnMoveJobOrder"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llRequest"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:padding="@dimen/_15sdp"
+                    android:text="@string/move_joborder"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="gone" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnUpdateJob"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="@font/lato_bold"
+
+                    android:layout_below="@id/llRequest"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/update"
+                    android:textAllCaps="true"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <!--       <RelativeLayout
+                   android:id="@+id/rrJobDuration"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:elevation="@dimen/_8sdp"
+                   android:visibility="visible">
+       -->
+
+        <!--  <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginStart="@dimen/_30sdp"
+              android:layout_toStartOf="@id/btnEndJob"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+              <androidx.appcompat.widget.AppCompatTextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:fontFamily="@font/lato_medium"
+                  android:text="Job Duration"
+                  android:textColor="@color/colorlightgray"
+                  android:textSize="@dimen/text_small" />
+
+
+              <androidx.appcompat.widget.AppCompatTextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/job_duration"
+                  android:textColor="@color/black"
+                  android:textSize="@dimen/_18sdp" />
+
+          </LinearLayout>-->
+
+
+        <RelativeLayout
+            android:id="@+id/rrJobDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:id="@+id/edtJobDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_medium"
+                    android:text="@string/job_duration"
+                    android:textColor="@color/colorlightgray"
+                    android:textSize="@dimen/text_small" />
+
+                <Chronometer
+                    android:id="@+id/txtEndJobDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text=""
+                    android:textColor="@color/fontColorBlack"
+                    android:textSize="@dimen/text_medium" />
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEndJob"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:padding="@dimen/_15sdp"
+                android:text="@string/end_job"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+
+
+        <!-- </RelativeLayout>-->
+    </RelativeLayout>
+
+
+    <!-- </ScrollView>-->
+</RelativeLayout>

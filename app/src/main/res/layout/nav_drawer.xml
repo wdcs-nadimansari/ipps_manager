@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <!--    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">-->
+
+    <RelativeLayout
+        android:id="@+id/rlProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_20sdp">
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/ivprofile"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:src="@drawable/ic_placeholder_profile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtManagerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_toStartOf="@id/ivclose"
+            android:layout_toEndOf="@id/ivprofile"
+            android:fontFamily="@font/lato_bold"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tveditprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtManagerName"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_toEndOf="@id/ivprofile"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/view_profile"
+            android:textColor="@color/white_30"
+            android:textSize="@dimen/text_medium" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivclose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/close"
+            android:tint="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ivprofile"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:background="@color/white_30" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/lato_semibold"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/maintenance_app"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/text_big" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtEngineers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/lato_semibold"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/engineers"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/text_big" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/lato_semibold"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/about_us"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/text_big" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtChangePass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/lato_semibold"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/change_password"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/text_big" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:visibility="gone"
+                android:id="@+id/txtSupport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/lato_semibold"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/support"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/text_big" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/lato_semibold"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/contact_us"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/text_big" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtFaq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/lato_semibold"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/faq"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/text_big" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/lato_semibold"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/logout"
+                android:textColor="@color/white_60"
+                android:textSize="@dimen/text_big" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--    </ScrollView>-->
+
+</LinearLayout>

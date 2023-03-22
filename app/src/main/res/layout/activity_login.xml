@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/main_layout_padding"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/lato_regular"
+        android:text="@string/welcome"
+        android:textColor="@color/fontColorBlack"
+        android:textSize="@dimen/text_header" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/lato_medium"
+        android:text="@string/login_account"
+        android:textColor="@color/fontColorBlack50"
+        android:textSize="@dimen/text_medium" />
+
+
+    <com.webclues.IPPSManager.view.MaterialEditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="@string/email"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/fontColorBlack"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="@dimen/text_medium"
+        app:met_errorColor="@color/red"
+        app:met_floatingLabel="normal"
+        app:met_floatingLabelTextColor="@color/fontColorBlack50"
+        app:met_typeface="@string/font_medium"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.webclues.IPPSManager.view.MaterialEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:hint="@string/password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:textColor="@color/fontColorBlack"
+            android:textSize="@dimen/text_medium"
+            app:met_errorColor="@color/red"
+            app:met_floatingLabel="normal"
+            app:met_typeface="@string/font_medium"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvforgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:fontFamily="@font/lato_medium"
+            android:padding="@dimen/_4sdp"
+            android:text="@string/forgot"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_medium" />
+
+    </FrameLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="@string/sign_in"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_semibold"
+            android:gravity="center"
+            android:text="@string/do_not_have_an_account"
+            android:textColor="@color/fontColorBlack50"
+            android:textSize="@dimen/text_medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvregister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_semibold"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/sign_up"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_medium" />
+
+    </LinearLayout>
+</LinearLayout>

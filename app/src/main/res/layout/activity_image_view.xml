@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ImageViewActivity">
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:id="@+id/llTop"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ivBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/back_arrow"
+            android:drawablePadding="@dimen/_15sdp"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/lato_semibold"
+            android:padding="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_big" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/mPhotoView"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

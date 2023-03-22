@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:background="@drawable/joborder_background">
+
+
+    <FrameLayout
+        android:id="@+id/framemetal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/joborder_background">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:indeterminate="false"
+                android:theme="@style/CircularProgress" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivJobImage"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_110sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/metaltechnology"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPriority"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="end"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="@string/metal_priority"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@id/framemetal"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtMachineName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toStartOf="@id/txtDate"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/fontColorBlack"
+                android:textSize="@dimen/text_medium" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/lato_medium"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/fontColorBlack60"
+                android:textSize="@dimen/text_small" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_medium"
+                android:maxLines="1"
+                android:text="@string/location"
+                android:textColor="@color/fontColorBlack50"
+                android:textSize="@dimen/text_small" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtLocationName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_semibold"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/fontColorBlack50"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_medium"
+                android:maxLines="1"
+                android:text="@string/problem"
+                android:textColor="@color/fontColorBlack50"
+                android:textSize="@dimen/text_small"
+                android:visibility="visible" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtProblemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_semibold"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/fontColorBlack50"
+                android:textSize="@dimen/text_small"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtEngineerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toStartOf="@id/txtStatus"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="1"
+                android:text=""
+                android:textAllCaps="false"
+                android:textColor="@color/fontColorBlack"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="end"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_small" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

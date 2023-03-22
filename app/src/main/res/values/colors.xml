@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#007BFF</color>
+    <color name="colorPrimaryDark">#007BFF</color>
+    <color name="colorAccent">#000000</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorlightBckground">#F5F5F5</color>
+    <color name="drawerBackground">#141313</color>
+    <color name="chatEditBackground">#333333</color>
+    <color name="colorlightgray">#8E9092</color>
+    <color name="grey_60">#998E9092</color>
+    <color name="cellBackground">#29000000</color>
+    <color name="recieverBackground">#F8F8F8</color>
+
+    <color name="fontColorBlack">#1D2226</color>
+    <color name="fontColorBlack60">#ADAFB0</color>
+    <color name="fontColorBlack50">#8D9092</color>
+    <color name="fontColorBlack40">#C6C6C6</color>
+    <!--    <color name="fontColorBlack50">#801D2226</color>-->
+    <!--    <color name="fontColorBlack60">#901D2226</color>-->
+
+
+    <color name="fontColorBlue">#007BFF</color>
+    <color name="lightblue">#1A007BFF</color>
+    <color name="fontColorBlue75">#62ACFB</color>
+    <color name="fontColorBlue60">#99CAFF</color>
+    <color name="fontcolorgrey">#BBBCBD</color>
+    <color name="fontColorRegularGrey">#8B8B8B</color>
+    <color name="fontColorReguler">#991D2226</color>
+    <color name="fontColorLightGrey">#B5B5B5</color>
+    <color name="lightGrey">#bdbdbd</color>
+    <color name="grey">#707070</color>
+    <color name="lightGrey_20op">#33707070</color>
+    <color name="lightGrey_12op">#1F707070</color>
+    <color name="lightGrey_16op">#10000000</color>
+    <color name="lightGrey_45op">#2d707070</color>
+    <color name="lightOrange">#FFDBD4</color>
+    <color name="extraLightGrey">#F5F5F5</color>
+    <color name="extraLightBlue">#007BFF1A</color>
+
+    <color name="messageHint">#E2E2E2</color>
+    <color name="lightwhite">#99CAFF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="whitelight">#f7f9f9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#0072BB</color>
+    <color name="green">#32C671</color>
+    <color name="green_10">#1A32C671</color>
+    <color name="red">#E93A3A</color>
+    <color name="orange">#ff5733</color>
+    <color name="yellow">#FFD200</color>
+    <color name="bluelight">#33dfff</color>
+    <color name="light_yellow">#1AFFD200</color>
+    <color name="light_red">#1AE93A3A</color>
+
+    <color name="bg_divider">#F0F0F0</color>
+    <color name="black">#000000</color>
+
+    <color name="lightGreen_42op">#6B5DBEA7</color>
+    <color name="lightGreen_39op">#635DBEA7</color>
+    <color name="transparent">#00000000</color>
+    <color name="popup_bg">#1D22264D</color>
+    <color name="colorDisable">#777777</color>
+    <color name="color_accent">#FF4081</color>
+    <color name="text_secondary">#212121</color>
+
+</resources>

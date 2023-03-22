@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SensorDetailHistoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_15sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"
+            android:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="@string/sensor_history"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_big"
+            android:tint="@color/white"
+            app:drawableTint="@color/white" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/extraLightGrey"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSensorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:maxLines="1"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_big"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/main_layout_padding">
+
+            <!--  <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:visibility="gone">
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                      android:id="@+id/txtTemprature"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginEnd="@dimen/_5sdp"
+                      android:layout_weight="1"
+                      android:background="@drawable/rectangle_background_blue"
+                      android:fontFamily="@font/lato_bold"
+                      android:gravity="center"
+                      android:padding="@dimen/_10sdp"
+                      android:text="@string/temprature"
+                      android:textColor="@color/white"
+                      android:textSize="@dimen/text_medium" />
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                      android:id="@+id/txtAccelerometer"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="@dimen/_5sdp"
+                      android:layout_marginEnd="@dimen/_5sdp"
+                      android:layout_weight="1"
+                      android:background="@drawable/rectangle_background_grey"
+                      android:fontFamily="@font/lato_bold"
+                      android:gravity="center"
+                      android:padding="@dimen/_10sdp"
+                      android:text="@string/accelerometer"
+                      android:textColor="@color/grey"
+                      android:textSize="@dimen/text_medium" />
+
+                  <ImageView
+                      android:id="@+id/ivCalender"
+                      android:layout_width="@dimen/_35sdp"
+                      android:layout_height="@dimen/_35sdp"
+                      android:layout_marginStart="@dimen/_5sdp"
+                          android:visibility="gone"
+                      android:src="@drawable/ic_calendar" />
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/_10sdp"
+
+                  android:orientation="horizontal">
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:fontFamily="@font/lato_medium"
+                      android:maxLines="1"
+                      android:text="@string/beacon_name"
+                      android:textColor="@color/fontColorBlack50"
+                      android:textSize="@dimen/text_small" />
+
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                      android:id="@+id/txtBeaconName"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="@dimen/_3sdp"
+                      android:ellipsize="end"
+                      android:fontFamily="@font/lato_semibold"
+                      android:maxLines="1"
+                      android:text="Biearing Fiber Cyclone"
+                      android:textColor="@color/fontColorBlack50"
+                      android:textSize="@dimen/text_small" />
+              </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_background_grey"
+                    android:fontFamily="@font/lato_medium"
+                    android:gravity="center"
+                    android:hint="Start date"
+                    android:padding="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_background_grey"
+                    android:fontFamily="@font/lato_medium"
+                    android:gravity="center"
+                    android:hint="End date"
+                    android:padding="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_background_grey"
+                    android:drawableRight="@drawable/ic_dropdown_small"
+                    android:fontFamily="@font/lato_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtDateEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_background_grey"
+                    android:fontFamily="@font/lato_medium"
+                    android:gravity="center"
+                    android:hint="End date"
+                    android:padding="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtGo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_background_grey"
+                    android:fontFamily="@font/lato_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Go"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtXAxis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato_medium"
+                android:gravity="start"
+                android:hint="X-Axis"
+                android:padding="@dimen/_10sdp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNoRecord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@string/medium"
+                    android:text="@string/no_record"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_300sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp" />
+
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtyAxis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato_medium"
+                android:gravity="start"
+                android:hint="Y-Axis"
+                android:padding="@dimen/_10sdp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone" />
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/ychart"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtZAxis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato_medium"
+                android:gravity="start"
+                android:hint="Z-Axis"
+                android:padding="@dimen/_10sdp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone" />
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/zchart"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/lnBettery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtExtraDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_medium"
+                    android:maxLines="1"
+                    android:text="@string/battery"
+                    android:textColor="@color/fontColorBlack50"
+                    android:textSize="@dimen/text_small"
+                    android:visibility="visible" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtBattery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lato_semibold"
+                    android:maxLines="1"
+                    android:text="90%"
+                    android:textColor="@color/fontColorBlack50"
+                    android:textSize="@dimen/text_small"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnEnergyAlarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/alarm_setting"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_big" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="@string/limit_high"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <EditText
+                        android:id="@+id/edHighLimit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/bg_rounded_black_border"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="@string/limit_low"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <EditText
+                        android:id="@+id/edLowLimit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/bg_rounded_black_border"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnAxisAlarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/alarm_setting"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_big" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/x_axis"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="@string/limit_high"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <EditText
+                        android:id="@+id/edXHigh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/bg_rounded_black_border"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="@string/limit_low"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <EditText
+                        android:id="@+id/edXLow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/bg_rounded_black_border"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/y_axis"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="@string/limit_high"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <EditText
+                        android:id="@+id/edYHigh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/bg_rounded_black_border"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="@string/limit_low"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <EditText
+                        android:id="@+id/edYLow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/bg_rounded_black_border"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/z_axis"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="@string/limit_high"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <EditText
+                        android:id="@+id/edZHigh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/bg_rounded_black_border"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="@string/limit_low"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <EditText
+                        android:id="@+id/edZLow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/bg_rounded_black_border"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/fontColorBlack"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSetAlarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/set_alarm"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
